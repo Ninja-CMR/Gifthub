@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SectionContainer from '@/components/layout/SectionContainer.vue'
 import { CheckCircle2 } from 'lucide-vue-next'
+import tunnelVenteImg from '../../assets/portfolio/tunnel_vente.png'
 
 const benefits = [
   'Site web professionnel complet',
@@ -53,7 +54,7 @@ const benefits = [
                 </div>
                 <div class="aspect-[16/10] bg-emerald-profound/40 rounded-2xl overflow-hidden relative shadow-inner border border-white/10">
                     <img 
-                        src="/src/assets/portfolio/tunnel_vente.png" 
+                        :src="tunnelVenteImg"
                         alt="Aperçu Tunnel Vente"
                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />

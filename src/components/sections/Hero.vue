@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BaseButton from '@/components/ui/BaseButton.vue'
 import SectionContainer from '@/components/layout/SectionContainer.vue'
+import heroImg from '@/assets/hero.png'
 
 interface Props {
   onCtaClick?: () => void
@@ -59,7 +60,7 @@ defineProps<Props>()
         <div class="absolute -inset-4 bg-emerald-profound/5 rounded-3xl -rotate-2 -z-10 scale-105" />
         <div class="relative rounded-3xl overflow-hidden shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500 border-4 border-white">
           <img 
-            src="@/assets/hero.png" 
+            :src="heroImg" 
             alt="Entrepreneur travaillant sur son projet" 
             class="w-full h-auto object-cover aspect-[4/5] md:aspect-auto"
           />

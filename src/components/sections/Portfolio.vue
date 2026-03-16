@@ -3,32 +3,38 @@ import SectionContainer from '@/components/layout/SectionContainer.vue'
 import SectionTitle from '@/components/ui/SectionTitle.vue'
 import { ExternalLink } from 'lucide-vue-next'
 
+// Import images to ensure Vite processes them correctly for production
+import tunnelVenteImg from '@/assets/portfolio/tunnel_vente.png'
+import architectSarlImg from '@/assets/portfolio/architect_sarl.png'
+import appingSoftwareImg from '@/assets/portfolio/apping_software.png'
+import yarnRestaurantImg from '@/assets/portfolio/yarn_restaurant.png'
+
 const projects = [
   {
     title: 'Tunnel Vente',
     description: 'Une plateforme e-commerce mode avec un design épuré, mettant l\'accent sur le visuel et la conversion.',
-    image: '/src/assets/portfolio/tunnel_vente.png',
+    image: tunnelVenteImg,
     link: 'https://tunnelvente.netlify.app/',
     tags: ['E-commerce', 'Mode', 'Vite']
   },
   {
     title: 'Architect SARL',
     description: 'Site vitrine pour cabinet d\'architecture, alliant structure, sérieux et présentation de projets complexes.',
-    image: '/src/assets/portfolio/architect_sarl.png',
+    image: architectSarlImg,
     link: 'https://architectsarl.netlify.app/',
     tags: ['Architecture', 'Corpo', 'Vue 3']
   },
   {
     title: 'Apping Software',
     description: 'Centre de formation numérique, proposant des parcours dynamiques pour les développeurs de demain.',
-    image: '/src/assets/portfolio/apping_software.png',
+    image: appingSoftwareImg,
     link: 'https://appingsoftware.com/',
     tags: ['Éducation', 'Tech', 'Next.js']
   },
   {
     title: 'Yarn Restaurant',
     description: 'Expérience gastronomique en ligne avec menu interactif et système de réservation intuitif.',
-    image: '/src/assets/portfolio/yarn_restaurant.png',
+    image: yarnRestaurantImg,
     link: 'https://yarn-restaurant.vercel.app/',
     tags: ['Restauration', 'UX/UI', 'Vercel']
   }

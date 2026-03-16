@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+    --color-emerald-profound: #065f46;
+    --color-emerald-clear: #10b981;
+    --color-beige-clear: #fef9f3;
+    --color-neutral-gray: #374151;
+    --color-accent: #f59e0b;
+
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-headings: "Poppins", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+    --shadow-premium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-premium-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-beige-clear text-neutral-gray font-sans antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-headings font-bold text-emerald-profound;
+    }
+}
+
+@layer components {
+    .section-container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+    }
+
+    .card-premium {
+        @apply bg-white rounded-2xl p-8 shadow-premium transition-all duration-300 hover:shadow-premium-hover border border-emerald-clear/5;
+    }
+
+    .button-primary {
+        @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-emerald-profound hover:bg-emerald-profound/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-clear;
+    }
+
+    .button-secondary {
+        @apply inline-flex items-center justify-center px-6 py-3 border border-emerald-profound text-base font-medium rounded-full text-emerald-profound bg-transparent hover:bg-emerald-profound/5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-clear;
+    }
+}

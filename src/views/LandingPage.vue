@@ -8,6 +8,7 @@ import Steps from '@/components/sections/Steps.vue'
 import ApplicationForm from '@/components/sections/ApplicationForm.vue'
 import Footer from '@/components/layout/Footer.vue'
 import { useScrollTo } from '@/composables/useScrollTo'
+import GifthubLogo from '@/components/ui/GifthubLogo.vue'
 
 const { scrollTo } = useScrollTo()
 
@@ -20,21 +21,16 @@ const handleCtaClick = () => {
   <div class="min-h-screen bg-beige-clear font-sans text-neutral-gray selection:bg-emerald-clear selection:text-white">
     <!-- Navigation Overlay (Logo) -->
     <nav class="fixed top-0 left-0 w-full z-50 bg-beige-clear/80 backdrop-blur-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-emerald-profound rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                    G
-                </div>
-                <span class="text-xl font-bold text-emerald-profound tracking-tight">Gifthub</span>
-            </div>
-            
-            <button 
-                @click="handleCtaClick"
-                class="hidden sm:block text-emerald-profound font-semibold hover:text-emerald-clear transition-colors text-sm"
-            >
-                Je demande mon site
-            </button>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <GifthubLogo class="cursor-pointer" @click="scrollTo('hero')" />
+        
+        <button 
+          @click="handleCtaClick"
+          class="hidden sm:block text-emerald-profound font-semibold hover:text-emerald-clear transition-colors text-sm"
+        >
+          Je demande mon site
+        </button>
+      </div>
     </nav>
 
     <main>

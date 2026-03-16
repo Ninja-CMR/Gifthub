@@ -43,17 +43,6 @@ defineProps<Props>()
             Voir comment ça marche
           </BaseButton>
         </div>
-
-        <div class="flex items-center space-x-4 pt-8 border-t border-gray-100">
-          <div class="flex -space-x-2">
-            <div v-for="i in 4" :key="i" class="w-10 h-10 rounded-full border-2 border-white bg-gray-200 overflow-hidden">
-               <img :src="`https://i.pravatar.cc/100?img=${i+10}`" alt="User" />
-            </div>
-          </div>
-          <p class="text-sm text-gray-500">
-            Rejoignez <span class="font-bold text-emerald-profound">50+ entrepreneurs</span> déjà propulsés.
-          </p>
-        </div>
       </div>
 
       <div class="relative lg:ml-8">
@@ -67,7 +56,7 @@ defineProps<Props>()
         </div>
         
         <!-- Floating Badge -->
-        <div class="absolute -bottom-6 -left-6 md:-left-12 bg-white p-6 rounded-2xl shadow-xl border border-emerald-clear/10 animate-bounce-slow">
+        <div class="absolute -bottom-6 -left-6 md:-left-12 bg-white p-6 rounded-2xl shadow-xl border border-emerald-clear/10 ">
           <div class="flex items-center space-x-4">
             <div class="p-3 bg-accent/20 rounded-xl">
                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
